@@ -1,0 +1,14 @@
+inputNumber = int(input())
+divisorNumber_list = [] #約数を入れるテーブル
+i = 2
+while (inputNumber > i) and (i <= int(inputNumber/2)):
+    # 約数を見つけたらdivisorNumber_listに約数を入れておく
+    if inputNumber % i == 0:
+        divisorNumber_list.append(i)
+    #print(inputNumber,'%',i,'=',inputNumber % i,'合成数' if (inputNumber % i == 0) else '') #条件演算 #for debug
+    i = i + 1
+if len(divisorNumber_list) == 0:
+    print('素数')
+else:
+    print('合成数')
+#print(divisorNumber_list) #for debug
